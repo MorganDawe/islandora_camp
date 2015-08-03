@@ -7,7 +7,7 @@
  * @TODO: needs documentation about file and variables
  */
 ?>
-<h1>TESTING WRAPPER OVERRIDE</h1>
+<h1>TESTING WRAPPER OVERRIDE, UNIQUE TO BASIC IMAGE COLLECTION</h1>
 <div class="islandora islandora-basic-collection">
     <?php $row_field = 0; ?>
     <?php foreach($associated_objects_array as $associated_object): ?>

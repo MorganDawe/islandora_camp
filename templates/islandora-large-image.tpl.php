@@ -21,7 +21,13 @@
  * @see theme_islandora_large_image()
  */
 ?>
-<h1>Large Image Shit</h1>
+
+<?php if (isset($large_image_preprocess_function_variable)): ?>
+  <?php print $large_image_preprocess_function_variable; ?>
+<?php endif; ?>
+
+<h1>LARGE IMAGE TEMPLATE OVERRIDE</h1>
+
 <div class="islandora-large-image-object islandora" vocab="http://schema.org/" prefix="dcterms: http://purl.org/dc/terms/" typeof="ImageObject">
   <div class="islandora-large-image-content-wrapper clearfix">
     <?php if ($islandora_content): ?>
