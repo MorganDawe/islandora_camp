@@ -2,8 +2,10 @@
 /* ---------- General Layout ---------- */
 
 .owl-featured-image {
-  height: 200px;
+  height: 160px;
   width: auto;
+  background-size: cover;
+  margin: 10px;
 }
 
 .owl-item {

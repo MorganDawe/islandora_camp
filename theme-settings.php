@@ -22,13 +22,19 @@ function islandora_camp_form_system_theme_settings_alter(&$form, $form_state, $f
     '#type' => 'textfield',
     '#title' => t('Slideshow Background Datastream'),
     '#default_value' => (theme_get_setting('slideshow_bg_datastream', 'islandora_camp') ? theme_get_setting('slideshow_bg_datastream', 'islandora_camp') : "TN" ),
-    '#description'   => t("The datastream to use in the frontpage slideshow (EX: 'TN', 'OBJ', etc..), Defaults to TN."),
+    '#description'   => t("The datastream to as an objects image representation in a slideshow (EX: OBJ, MEDIUM, TN), defaults to TN"),
   );
   $form['islandora_camp_settings_custom']['advanced_collection_view'] = array(
     '#type' => 'textfield',
     '#title' => t('Advanced collection view PIDS'),
     '#default_value' => theme_get_setting('advanced_collection_view'),
     '#description'   => t("A comma seperated list of PIDS to be presented utilizing a more Advanced collection view. Add 'all' to apply to all collections"),
+  );
+  $form['islandora_camp_settings_custom']['show_collection_metadata'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Show collection level metadata'),
+    '#default_value' => theme_get_setting('show_collection_metadata'),
+    '#description'   => t("Select to show collection level metadata on collection pages"),
   );
   $form['islandora_camp_settings_custom']['advanced_collection_search_view'] = array(
     '#type' => 'checkbox',

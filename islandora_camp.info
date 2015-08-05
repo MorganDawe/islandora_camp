@@ -8,6 +8,12 @@ version = "7.38"
 stylesheets[all][] = css/colors.css
 stylesheets[all][] = css/frontpage-slideshow.css
 
+;override default module supplied CSS
+stylesheets[all][] = css/islandora_basic_image.theme.css
+
+;override default module supplied JS
+scripts[] = js/islandora_solr_facets.js
+
 regions[header] = Header
 regions[help] = Help
 regions[page_top] = Page top

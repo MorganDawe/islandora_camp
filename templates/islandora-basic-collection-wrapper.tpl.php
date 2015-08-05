@@ -12,17 +12,13 @@
 <?php if (isset($islandora_custom_simple_search)): ?>
   <?php print $islandora_custom_simple_search; ?>
 <?php endif; ?>
+<?php if (isset($collection_metadata)): ?>
+  <div class="collection-level-metadata">
+    <?php print $collection_metadata; ?>
+  </div>
+<?php endif; ?>
   <?php if (isset($advanced_collection_view)): ?>
-    <div class="collection-level-image">
-      <img alt="Collection Image" src="<?php print $advanced_collection_view['TN']; ?>">
-    </div>
     <hr />
-    <?php if (isset($advanced_collection_view['metadata'])): ?>
-    <div class="collection-level-metadata">
-      <?php print $advanced_collection_view['metadata']; ?>
-    </div>
-    <hr />
-    <?php endif; ?>
     <?php if (isset($advanced_collection_view['carousel'])): ?>
     <div class="collection-level-carousel">
       <?php print $advanced_collection_view['carousel']; ?>
