@@ -7,7 +7,7 @@
  * @TODO: needs documentation about file and variables
  */
 ?>
-
+<h1>Override islandora-basic-collection-wrapper</h1>
 <div class="islandora-basic-collection-wrapper">
 <?php if (isset($islandora_custom_simple_search)): ?>
   <?php print $islandora_custom_simple_search; ?>
