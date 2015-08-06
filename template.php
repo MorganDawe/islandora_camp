@@ -23,6 +23,15 @@ function islandora_camp_preprocess_islandora_basic_collection_wrapper(&$variable
   // islandora simple search block, collection metadata and a view rendered
   // dynamically.
 
+  // COLLECTION METADATA:
+  // Include the required metadata functionality.
+  module_load_include('inc', 'islandora', 'includes/metadata');
+  // Be sure to add the required Drupal libraries for the metadata form.
+  drupal_add_js('misc/form.js');
+  drupal_add_js('misc/collapse.js');
+  // Set our metadata variable to be printed in the template.
+  $variables['collection_metadata'] = islandora_retrieve_metadata_markup($variables['islandora_object']);
+
   // Grab our pid for use as we work in this preprocess function
   $pid = $variables['islandora_object']->{'id'};
 
@@ -82,21 +91,6 @@ function islandora_camp_preprocess_islandora_basic_collection_wrapper(&$variable
         $variables['advanced_collection_view']  = $output;
       }
     }
-  }
-
-  // Show collection metadata if selected in the theme settings.
-  $metadata = "";
-  $show_metadata = theme_get_setting('show_collection_metadata', 'islandora_camp');
-  if (isset($show_metadata) && $show_metadata > 0) {
-    // Include the required metadata functionality.
-    module_load_include('inc', 'islandora', 'includes/metadata');
-
-    // Be sure to add the required Drupal libraries for the metadata form.
-    drupal_add_js('misc/form.js');
-    drupal_add_js('misc/collapse.js');
-
-    // Set our metadata variable to be printed in the template.
-    $variables['collection_metadata']  = islandora_retrieve_metadata_markup($variables['islandora_object']);
   }
 
   // Show islandora simple search if selected in theme settings.
