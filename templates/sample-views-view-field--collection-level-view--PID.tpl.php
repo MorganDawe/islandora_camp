@@ -24,5 +24,5 @@
  */
 ?>
 <a href="/islandora/object/<?php print $output; ?>">
-  <div class="owl-featured-image" style="background-image: url(/islandora/object/<?php print urlencode($output); ?>/datastream/<?php print theme_get_setting('slideshow_bg_datastream', 'islandora_camp');?>/view); background-repeat: no-repeat; background-position: center;" alt=""></div>
+  <div class="owl-featured-image" style="background-image: url(/islandora/object/<?php print urlencode($output); ?>/datastream/<?php print theme_get_setting('collection_bg_datastream', 'islandora_camp');?>/view); background-repeat: no-repeat; background-position: center;" alt=""></div>
 </a>

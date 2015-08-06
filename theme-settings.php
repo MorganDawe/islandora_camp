@@ -18,11 +18,11 @@ function islandora_camp_form_system_theme_settings_alter(&$form, $form_state, $f
     '#collapsible' => FALSE,
     '#collapsed' => FALSE,
   );
-  $form['islandora_camp_settings_custom']['slideshow_bg_datastream'] = array(
+  $form['islandora_camp_settings_custom']['collection_bg_datastream'] = array(
     '#type' => 'textfield',
-    '#title' => t('Slideshow Background Datastream'),
-    '#default_value' => (theme_get_setting('slideshow_bg_datastream', 'islandora_camp') ? theme_get_setting('slideshow_bg_datastream', 'islandora_camp') : "TN" ),
-    '#description'   => t("The datastream to as an objects image representation in a slideshow (EX: OBJ, MEDIUM, TN), defaults to TN"),
+    '#title' => t('Collection View Background Datastream'),
+    '#default_value' => (theme_get_setting('collection_bg_datastream', 'islandora_camp') ? theme_get_setting('slideshow_bg_datastream', 'islandora_camp') : "TN" ),
+    '#description'   => t("The datastream to use as an objects image representation in the collection view (EX: OBJ, MEDIUM, TN), defaults to TN"),
   );
   $form['islandora_camp_settings_custom']['advanced_collection_view'] = array(
     '#type' => 'textfield',
