@@ -14,8 +14,6 @@ stylesheets[all][] = css/islandora_basic_image.theme.css
 ;override default module supplied JS
 scripts[] = js/islandora_solr_facets.js
 
-settings[show_collection_metadata] = 1
-
 regions[header] = Header
 regions[help] = Help
 regions[page_top] = Page top

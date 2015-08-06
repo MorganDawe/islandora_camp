@@ -30,12 +30,6 @@ function islandora_camp_form_system_theme_settings_alter(&$form, $form_state, $f
     '#default_value' => theme_get_setting('advanced_collection_view'),
     '#description'   => t("A comma seperated list of PIDS to be presented utilizing a more Advanced collection view. Add 'all' to apply to all collections"),
   );
-  $form['islandora_camp_settings_custom']['show_collection_metadata'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Show collection level metadata'),
-    '#default_value' => theme_get_setting('show_collection_metadata'),
-    '#description'   => t("Select to show collection level metadata on collection pages"),
-  );
   $form['islandora_camp_settings_custom']['advanced_collection_search_view'] = array(
     '#type' => 'checkbox',
     '#title' => t('Show search block on collection pages'),
