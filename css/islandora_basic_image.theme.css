@@ -14,8 +14,8 @@
 }
 
 .islandora-basic-image-content {
-  background-color: grey;
-  border: 1px solid #ddd;
+  background-color: #EEE;
+  border: 4px solid red;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
