@@ -5,6 +5,14 @@
     that breaks down to two columns when 2 sidebars are visible
 */
 
+/* Added for Islandora Camp */
+.islandora-basic-image-content::before {
+  content: "Look! An image!: ";
+}
+.islandora-basic-image-content::after {
+  content: "Wasn't that a great image? ";
+}
+
 .islandora-basic-image-content {
   background-color: grey;
   border: 1px solid #ddd;
