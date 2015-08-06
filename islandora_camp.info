@@ -6,7 +6,7 @@ core = 7.x
 base theme = bartik
 version = "7.38"
 stylesheets[all][] = css/colors.css
-stylesheets[all][] = css/frontpage-slideshow.css
+stylesheets[all][] = css/collection_view.css
 
 ;override default module supplied CSS
 stylesheets[all][] = css/islandora_basic_image.theme.css

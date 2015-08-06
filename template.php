@@ -50,16 +50,12 @@ function islandora_camp_preprocess_islandora_basic_collection_wrapper(&$variable
   // All collections depending on the theme settings.
   if (in_array($pid, $collection_pids) || in_array("all", $collection_pids)) {
 
-    // Prepare advanced collection view template
-    $embeded = views_embed_view('frontpage_owl_carousel', 'block');
-
     // Set out as catch all, in-case our view is not around.
-    $output = "";
     if (module_exists('owlcarousel')) {
       //First create a view object for the given view
       // TODO: Could move this to the theme settings, specifying what view shows on the
       // collection level page why not?
-      $view = views_get_view('frontpage_owl_carousel');
+      $view = views_get_view('collection_level_view');
       if (isset($view)) {
         // If our view exists, then set the display.
         $view->set_display('block');
@@ -83,9 +79,7 @@ function islandora_camp_preprocess_islandora_basic_collection_wrapper(&$variable
         $output = $view->render();
 
         // Passing this as array, perhaps add more, like custom title or the like?
-        $variables['advanced_collection_view']  = array(
-          'carousel' => $output
-        );
+        $variables['advanced_collection_view']  = $output;
       }
     }
   }

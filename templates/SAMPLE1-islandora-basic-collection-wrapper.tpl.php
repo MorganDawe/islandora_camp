@@ -19,9 +19,9 @@
 <?php endif; ?>
   <?php if (isset($advanced_collection_view)): ?>
     <hr />
-    <?php if (isset($advanced_collection_view['carousel'])): ?>
+    <?php if (isset($advanced_collection_view)): ?>
     <div class="collection-level-carousel">
-      <?php print $advanced_collection_view['carousel']; ?>
+      <?php print $advanced_collection_view; ?>
     </div>
     <hr />
     <?php endif; ?>
